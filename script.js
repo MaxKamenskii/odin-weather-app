@@ -21,11 +21,16 @@ weatherForm.addEventListener("submit", async event => {
     const city = cityInput.value;
 
     if(city){
-        const weatherData = await getWeatherData(city)
-        displayWeatherInfo(weatherData)
+        try{
+            const weatherData = await getWeatherData(city);
+            displayWeatherInfo(weatherData)
+        }
+        catch(error){
+            console.error(error)
+            displayError(error)
+        }
     }
     else {
-        console.error(error)
         displayError("Please enter a city")
     }
 
@@ -37,7 +42,7 @@ async function getWeatherData(city){
     const response = await fetch(apiUrl)
 
     if(!response.ok){
-        throw new Error("Could not fetch weather data");
+        throw new Error("404: Not Found");
     }
 
     return await response.json();
@@ -46,7 +51,54 @@ async function getWeatherData(city){
 function displayWeatherInfo(data){
 
     console.log(data)
-    
+
+    const {resolvedAddress: city,
+           days: [{conditions, temp, tempmax, tempmin, uvindex, windspeed, feelslike, pressure, humidity, sunrise, sunset}]} = data;
+    card.textContent = "";
+    card.style.display = "flex";
+
+    const cityDisplay = document.createElement('h1');
+    const conditionsDisplay = document.createElement('p');
+    const tempDisplay = document.createElement('p');
+    const feelsLikeDisplay = document.createElement('p');
+    const tempmaxDisplay = document.createElement('p');
+    const tempminDisplay = document.createElement('p');
+    const iconPng = document.createElement('p');
+    const uvindexDisplay = document.createElement('p');
+    const humudityDisplay = document.createElement('p');
+    const pressureDisplay = document.createElement('p');
+    const sunriseDisplay = document.createElement('p');
+    const sunsetDisplay = document.createElement('p');
+    const windspeedDisplay = document.createElement('p');
+
+    cityCapitilized = casing(city)
+    cityDisplay.textContent = cityCapitilized;
+    conditionsDisplay.textContent = conditions;
+    feelsLikeDisplay.textContent = feelslike;
+    tempmaxDisplay.textContent = tempmax;
+    tempminDisplay.textContent = tempmin;
+    uvindexDisplay.textContent = uvindex;
+    humudityDisplay.textContent = humidity;
+    pressureDisplay.textContent = pressure;
+    sunriseDisplay.textContent = sunrise;
+    sunsetDisplay.textContent = sunset;
+    windspeedDisplay.textContent = windspeed;
+
+    tempDisplay.textContent = `${temp}°F`;
+    cityDisplay.classList.add("cityDisplay")
+
+    card.appendChild(cityDisplay)
+    card.appendChild(tempDisplay)
+    card.appendChild(feelsLikeDisplay)
+    card.appendChild(tempmaxDisplay)
+    card.appendChild(tempminDisplay)
+    card.appendChild(uvindexDisplay)
+    card.appendChild(humudityDisplay)
+    card.appendChild(pressureDisplay)
+    card.appendChild(windspeedDisplay)
+    card.appendChild(sunriseDisplay)
+    card.appendChild(sunsetDisplay)
+
 }
 
 function getWeatherEmoji(weatherId){
@@ -57,12 +109,22 @@ function displayError(message){
 
     const errorDisplay = document.createElement("p");
     errorDisplay.textContent = message;
+    errorDisplay.classList.add("errorDisplay");
 
     card.textContent = "";
     card.style.display = "flex";
     card.appendChild(errorDisplay);
 }
 
+function casing(cityName) {
+    upperCaseCityName = "";
+    var cityArr = cityName.split(" ");
+
+    for (var i = 0; i < cityArr.length; i++){
+        upperCaseCityName += cityArr[i].charAt(0).toUpperCase() + cityArr[i].slice(1) + " ";
+    }
+    return upperCaseCityName;
+}
 // async function fetchData(){
 
 //     try {

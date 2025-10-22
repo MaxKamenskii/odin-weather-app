@@ -65,10 +65,10 @@ function displayWeatherInfo(data){
     cityTitleRow.classList.add('cityTitleRow');
     const mainConditionsRow = document.createElement('div');
     mainConditionsRow.classList.add('mainConditionsRow');
-    const tempsBlock = document.createAttribute('div');
-    // tempsBlock.classList.add('tempsBlock')
-    // const highLowRow = document.createElement('div');
-    // highLowRow.classList.add('highLowRow');
+    const tempsBlock = document.createElement('div');
+    tempsBlock.classList.add('tempsBlock')
+    const highLowRow = document.createElement('div');
+    highLowRow.classList.add('highLowRow');
     // const minorConditionsRow = document.createElement('div');
     // minorConditionsRow.classList.add('minorConditionsRow');
     // const minorBoxWind = document.createElement('div');
@@ -83,6 +83,7 @@ function displayWeatherInfo(data){
     const cityDisplay = document.createElement('h1');
     const conditionsDisplay = document.createElement('p');
     const tempDisplay = document.createElement('p');
+    tempDisplay.classList.add('tempDisplay')
     const feelsLikeDisplay = document.createElement('p');
     const tempmaxDisplay = document.createElement('p');
     const tempminDisplay = document.createElement('p');
@@ -117,28 +118,27 @@ function displayWeatherInfo(data){
     card.appendChild(mainConditionsRow)
     // card.appendChild(minorConditionsRow)
     // Appending mainConditionsRow
-    // mainConditionsRow.appendChild(tempsBlock)
-    // tempsBlock.appendChild(tempDisplay)
-    // tempsBlock.appendChild(conditionsDisplay)
-    // cityTitleRow.appendChild(cityDisplay)
-    // tempsBlock.appendChild(highLowRow)
-    // highLowRow.appendChild(tempminDisplay)
-    // highLowRow.appendChild(tempmaxDisplay)
+    mainConditionsRow.appendChild(tempsBlock)
+    tempsBlock.appendChild(tempDisplay)
+    tempsBlock.appendChild(conditionsDisplay)
+    tempsBlock.appendChild(highLowRow)
+    highLowRow.appendChild(tempminDisplay)
+    highLowRow.appendChild(tempmaxDisplay)
     // Appending minorConditionsRow
     // minorConditionsRow.appendChild(minorBoxWind)
     // minorConditionsRow.appendChild(minorBoxHumidity)
     // minorConditionsRow.appendChild(minorBoxUvindex)
     // minorConditionsRow.appendChild(minorBoxPressure)
 
-    card.appendChild(feelsLikeDisplay)
-    card.appendChild(tempmaxDisplay)
-    card.appendChild(tempminDisplay)
-    card.appendChild(uvindexDisplay)
-    card.appendChild(humudityDisplay)
-    card.appendChild(pressureDisplay)
-    card.appendChild(windspeedDisplay)
-    card.appendChild(sunriseDisplay)
-    card.appendChild(sunsetDisplay)
+    // card.appendChild(feelsLikeDisplay)
+    // card.appendChild(tempmaxDisplay)
+    // card.appendChild(tempminDisplay)
+    // card.appendChild(uvindexDisplay)
+    // card.appendChild(humudityDisplay)
+    // card.appendChild(pressureDisplay)
+    // card.appendChild(windspeedDisplay)
+    // card.appendChild(sunriseDisplay)
+    // card.appendChild(sunsetDisplay)
 
 }
 

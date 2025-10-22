@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/a68e0fb2e2.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div class="card" style="display: flex">
+        <div class="cityTitleRow">
+            <h1 class="cityDisplay">Miami</h1>
+        </div>
+        <div class="mainConditionsRow">
+            <div class="tempsBlock">
+                <p class="tempDisplay">79.6°F</p>
+                <p class="conditionsDisplay">Clear</p>
+                <div class="highLowRow">
+                    <p class="tempminDisplay">L:76.3°F</p>
+                    <p class="tempmaxDisplay">H:81.9°F</p>
+                </div>  
+            </div>
+            <p class="iconPng">☀️</p>
+        </div>
+        <div class="minorConditionsRow">
+            <div class="minorBox">
+                <div>
+                    <i class="fa-solid fa-wind" style="color: #9da9b7;"></i>
+                    <h1>Wind</h1>
+                </div>
+                <p class="windspeedDisplay">20.8</p>
+            </div>
+            <div class="minorBox">
+                <div>
+                    <i class="fa-solid fa-droplet" style="color: #9da9b7;"></i>
+                    <h1>Humidity</h1></div>
+                <p class="humudityDisplay">75%</p>
+            </div>
+            <div class="minorBox">
+                <div>
+                    <i class="fa-regular fa-sun" style="color: #9da9b7;"></i>
+                    <h1>Uvindex</h1>
+                </div>
+                <p class="uvindexDisplay">4</p>
+            </div>
+            <div class="minorBox">
+                <div>
+                    <i class="fa-solid fa-gauge" style="color: #9da9b7;"></i>
+                    <h1>Pressure</h1>
+                </div>
+                <p class="pressureDisplay">1011 hPa</p>
+            </div>
+        </div>
+        
+        <p id="forecastTitle">7-Day Forecast</p>
+        <div class="weekForecastRow">
+            <div class="dayBox">
+                <p>Mon</p>
+                <p class="dayIcon">☀️</p>
+                <p>81.9°</p>
+                <p>76.3°</p>
+            </div>
+            <div class="dayBox">
+                <p>Tue</p>
+                <p class="dayIcon">🌤️</p>
+                <p>76.9°</p>
+                <p>68.3°</p>
+            </div>
+            <div class="dayBox">
+                <p>Wed</p>
+                <p class="dayIcon">🌦️</p>
+                <p>70.3°</p>
+                <p>65.7°</p>
+            </div>
+            <div class="dayBox">
+                <p>Thu</p>
+                <p class="dayIcon">🌧️</p>
+                <p>68.9°</p>
+                <p>63.3°</p>
+            </div>
+            <div class="dayBox">
+                <p>Fri</p>
+                <p class="dayIcon">⛈️</p>
+                <p>65.7°</p>
+                <p>60.3°</p>
+            </div>
+            <div class="dayBox">
+                <p>Sat</p>
+                <p class="dayIcon">🌩️</p>
+                <p>56.9°</p>
+                <p>48.3°</p>
+            </div>
+            <div class="dayBox">
+                <p>Sun</p>
+                <p class="dayIcon">🌨️</p>
+                <p>35.8°</p>
+                <p>30.3°</p>
+            </div>
+        </div>
+        
+        <!-- <p class="feelsLikeDisplay"> 76.8 F</p> -->
+        
+        
+        
+        
+        
+        
+        <!-- <p class="sunriseDisplay">7:20 am</p>
+        <p class="sunsetDisplay">6:51 pm</p> -->
+        
+
+        <!-- <p class="errorDisplay">Please enter a city</p> -->
+    </div>
+</body>
+</html>
+
+
+<!-- data I would like to show -->
+ <!-- 
+    conditions
+    temp
+    feelslike
+    humidity
+    icon
+    pressure
+    sunrise
+    sunset
+    tempmax
+    tempmin
+    uvindex
+    windspeed
+
+ -->

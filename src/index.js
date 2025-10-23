@@ -130,6 +130,28 @@ function displayWeatherInfo(data){
     minorBoxHumidityDiv.appendChild(humidityTitle)
     humidityTitle.textContent = "Humidity"
     minorBoxHumidity.appendChild(humidityDisplay)
+    // Minor box unindex
+    const minorBoxUvindexDiv = document.createElement('div')
+    const uvindexIcon = document.createElement("i")
+    uvindexIcon.classList.add('fa-solid', 'fa-droplet')
+    uvindexIcon.style.color = '#9da9b7';
+    minorBoxUvindex.appendChild(minorBoxUvindexDiv)
+    minorBoxUvindexDiv.appendChild(uvindexIcon)
+    const uvindexTitle = document.createElement('h1')
+    minorBoxUvindexDiv.appendChild(uvindexTitle)
+    uvindexTitle.textContent = "uvindex"
+    minorBoxUvindex.appendChild(uvindexDisplay)
+    // Minor box pressure
+    const minorBoxPressureDiv = document.createElement('div')
+    const pressureIcon = document.createElement("i")
+    pressureIcon.classList.add('fa-solid', 'fa-droplet')
+    pressureIcon.style.color = '#9da9b7';
+    minorBoxPressure.appendChild(minorBoxPressureDiv)
+    minorBoxPressureDiv.appendChild(pressureIcon)
+    const pressureTitle = document.createElement('h1')
+    minorBoxPressureDiv.appendChild(pressureTitle)
+    pressureTitle.textContent = "pressure"
+    minorBoxPressure.appendChild(pressureDisplay)
 
     tempDisplay.textContent = `${temp}°F`;
     cityDisplay.classList.add("cityDisplay")

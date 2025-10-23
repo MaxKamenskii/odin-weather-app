@@ -89,7 +89,7 @@ function displayWeatherInfo(data){
     const tempminDisplay = document.createElement('p');
     const iconPng = document.createElement('p');
     const uvindexDisplay = document.createElement('p');
-    const humudityDisplay = document.createElement('p');
+    const humidityDisplay = document.createElement('p');
     const pressureDisplay = document.createElement('p');
     const sunriseDisplay = document.createElement('p');
     const sunsetDisplay = document.createElement('p');
@@ -102,13 +102,13 @@ function displayWeatherInfo(data){
     tempmaxDisplay.textContent = `H:${tempmax}°F`;
     tempminDisplay.textContent = `H:${tempmin}°F`;
     uvindexDisplay.textContent = uvindex;
-    humudityDisplay.textContent = humidity;
+    humidityDisplay.textContent = humidity;
     pressureDisplay.textContent = pressure;
     sunriseDisplay.textContent = sunrise;
     sunsetDisplay.textContent = sunset;
     windspeedDisplay.textContent = windspeed;
     
-    // Minor boxes
+    // Minor box wind
     const minorBoxWindDiv = document.createElement('div')
     const windIcon = document.createElement("i")
     windIcon.classList.add('fa-solid', 'fa-wind')
@@ -119,7 +119,17 @@ function displayWeatherInfo(data){
     minorBoxWindDiv.appendChild(windTitle)
     windTitle.textContent = "Wind"
     minorBoxWind.appendChild(windspeedDisplay)
-    
+    // Minor box humidity
+    const minorBoxHumidityDiv = document.createElement('div')
+    const humidityIcon = document.createElement("i")
+    humidityIcon.classList.add('fa-solid', 'fa-droplet')
+    humidityIcon.style.color = '#9da9b7';
+    minorBoxHumidity.appendChild(minorBoxHumidityDiv)
+    minorBoxHumidityDiv.appendChild(humidityIcon)
+    const humidityTitle = document.createElement('h1')
+    minorBoxHumidityDiv.appendChild(humidityTitle)
+    humidityTitle.textContent = "Humidity"
+    minorBoxHumidity.appendChild(humidityDisplay)
 
     tempDisplay.textContent = `${temp}°F`;
     cityDisplay.classList.add("cityDisplay")

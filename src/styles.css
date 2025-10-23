@@ -100,11 +100,9 @@ p{
     margin: 5px;
     font-size: 0.8rem;
     color: rgb(156, 170, 183);
-    /* margin-left: 5px; */
     padding: 0px;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     gap: 5px;
 }
 .minorBox h1 {

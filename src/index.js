@@ -69,16 +69,16 @@ function displayWeatherInfo(data){
     tempsBlock.classList.add('tempsBlock')
     const highLowRow = document.createElement('div');
     highLowRow.classList.add('highLowRow');
-    // const minorConditionsRow = document.createElement('div');
-    // minorConditionsRow.classList.add('minorConditionsRow');
-    // const minorBoxWind = document.createElement('div');
-    // minorBoxWind.classList.add('minorBox');
-    // const minorBoxHumidity = document.createElement('div');
-    // minorBoxHumidity.classList.add('minorBox');
-    // const minorBoxUvindex = document.createElement('div');
-    // minorBoxUvindex.classList.add('minorBox');
-    // const minorBoxPressure = document.createElement('div');
-    // minorBoxPressure.classList.add('minorBox');
+    const minorConditionsRow = document.createElement('div');
+    minorConditionsRow.classList.add('minorConditionsRow');
+    const minorBoxWind = document.createElement('div');
+    minorBoxWind.classList.add('minorBox');
+    const minorBoxHumidity = document.createElement('div');
+    minorBoxHumidity.classList.add('minorBox');
+    const minorBoxUvindex = document.createElement('div');
+    minorBoxUvindex.classList.add('minorBox');
+    const minorBoxPressure = document.createElement('div');
+    minorBoxPressure.classList.add('minorBox');
     // Display elements
     const cityDisplay = document.createElement('h1');
     const conditionsDisplay = document.createElement('p');
@@ -107,7 +107,19 @@ function displayWeatherInfo(data){
     sunriseDisplay.textContent = sunrise;
     sunsetDisplay.textContent = sunset;
     windspeedDisplay.textContent = windspeed;
-
+    
+    // Minor boxes
+    const minorBoxWindDiv = document.createElement('div')
+    const windIcon = document.createElement("i")
+    windIcon.classList.add('fa-solid', 'fa-wind')
+    windIcon.style.color = '#9da9b7';
+    minorBoxWind.appendChild(minorBoxWindDiv)
+    minorBoxWindDiv.appendChild(windIcon)
+    const windTitle = document.createElement('h1')
+    minorBoxWindDiv.appendChild(windTitle)
+    windTitle.textContent = "Wind"
+    minorBoxWind.appendChild(windspeedDisplay)
+    
 
     tempDisplay.textContent = `${temp}°F`;
     cityDisplay.classList.add("cityDisplay")
@@ -116,7 +128,7 @@ function displayWeatherInfo(data){
     card.appendChild(cityTitleRow)
     cityTitleRow.appendChild(cityDisplay)
     card.appendChild(mainConditionsRow)
-    // card.appendChild(minorConditionsRow)
+    card.appendChild(minorConditionsRow)
     // Appending mainConditionsRow
     mainConditionsRow.appendChild(tempsBlock)
     tempsBlock.appendChild(tempDisplay)
@@ -125,10 +137,10 @@ function displayWeatherInfo(data){
     highLowRow.appendChild(tempminDisplay)
     highLowRow.appendChild(tempmaxDisplay)
     // Appending minorConditionsRow
-    // minorConditionsRow.appendChild(minorBoxWind)
-    // minorConditionsRow.appendChild(minorBoxHumidity)
-    // minorConditionsRow.appendChild(minorBoxUvindex)
-    // minorConditionsRow.appendChild(minorBoxPressure)
+    minorConditionsRow.appendChild(minorBoxWind)
+    minorConditionsRow.appendChild(minorBoxHumidity)
+    minorConditionsRow.appendChild(minorBoxUvindex)
+    minorConditionsRow.appendChild(minorBoxPressure)
 
     // card.appendChild(feelsLikeDisplay)
     // card.appendChild(tempmaxDisplay)
@@ -136,7 +148,7 @@ function displayWeatherInfo(data){
     // card.appendChild(uvindexDisplay)
     // card.appendChild(humudityDisplay)
     // card.appendChild(pressureDisplay)
-    // card.appendChild(windspeedDisplay)
+    // card.
     // card.appendChild(sunriseDisplay)
     // card.appendChild(sunsetDisplay)
 

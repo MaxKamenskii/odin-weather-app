@@ -115,7 +115,7 @@ p{
     font-size: 0.8rem;
 }
 
-#forecastTitle{
+.forecastTitle{
     color: rgb(156, 170, 183);
     font-size: 1rem;
 }

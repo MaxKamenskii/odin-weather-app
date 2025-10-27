@@ -2,14 +2,148 @@ import "./styles.css";
 import { add } from './math.js';
 console.log('Result:', add(5, 6));
 
-// fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/new%20york?unitGroup=us&key=L7L27578GUK7YMFD4SANGWWQ9&contentType=json")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data)
-//         console.log(`Address is ${data.address}`)
-//         console.log(`Today is ${data.currentConditions.conditions}`)
-//     })
-//     .catch(error => console.error(error))
+const weatherImages = []
+import clearDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg";
+const clearDayImage = document.createElement('img')
+clearDayImage.src = clearDay
+clearDayImage.setAttribute("id", "clearDayImage")
+weatherImages.push(clearDayImage)
+import clearNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-night.svg";
+const clearNightImage = document.createElement('img')
+clearNightImage.src = clearNight
+clearNightImage.setAttribute("id", "clearNightImage")
+weatherImages.push(clearNightImage)
+import cloudy from "../assets/WeatherIcons-main/SVG/3rd Set - Color/cloudy.svg";
+const cloudyImage = document.createElement('img')
+cloudyImage.src = cloudy
+cloudyImage.setAttribute("id", "cloudyImage")
+weatherImages.push(cloudyImage)
+import fog from "../assets/WeatherIcons-main/SVG/3rd Set - Color/fog.svg";
+const fogImage = document.createElement('img')
+fogImage.src = fog
+fogImage.setAttribute("id", "fogImage")
+weatherImages.push(fogImage)
+import hail from "../assets/WeatherIcons-main/SVG/3rd Set - Color/hail.svg";
+const hailImage = document.createElement('img')
+hailImage.src = hail
+hailImage.setAttribute("id", "hailImage")
+weatherImages.push(hailImage)
+import partlyCloudyDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-day.svg";
+const partlyCloudyDayImage = document.createElement('img')
+partlyCloudyDayImage.src = partlyCloudyDay
+partlyCloudyDayImage.setAttribute("id", "partlyCloudyDayImage")
+weatherImages.push(partlyCloudyDayImage)
+import partlyCloudyNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-night.svg";
+const partlyCloudyNightImage = document.createElement('img')
+partlyCloudyNightImage.src = partlyCloudyNight
+partlyCloudyNightImage.setAttribute("id", "partlyCloudyNightImage")
+weatherImages.push(partlyCloudyNightImage)
+import rainSnowShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-day.svg";
+const rainSnowShowersDayImage = document.createElement('img')
+rainSnowShowersDayImage.src = rainSnowShowersDay
+rainSnowShowersDayImage.setAttribute("id", "rainSnowShowersDayImage")
+weatherImages.push(rainSnowShowersDayImage)
+import rainSnowShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-night.svg";
+const rainSnowShowersNightImage = document.createElement('img')
+rainSnowShowersNightImage.src = rainSnowShowersNight
+rainSnowShowersNightImage.setAttribute("id", "rainSnowShowersNightImage")
+weatherImages.push(rainSnowShowersNightImage)
+import rainSnow from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow.svg";
+const rainSnowImage = document.createElement('img')
+rainSnowImage.src = rainSnow
+rainSnowImage.setAttribute("id", "rainSnowImage")
+weatherImages.push(rainSnowImage)
+import rain from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain.svg";
+const rainImage = document.createElement('img')
+rainImage.src = rain
+rainImage.setAttribute("id", "rainImage")
+weatherImages.push(rainImage)
+import showersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-day.svg";
+const showersDayImage = document.createElement('img')
+showersDayImage.src = showersDay
+showersDayImage.setAttribute("id", "showersDayImage")
+weatherImages.push(showersDayImage)
+import showersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-night.svg";
+const showersNightImage = document.createElement('img')
+showersNightImage.src = showersNight
+showersNightImage.setAttribute("id", "showersNightImage")
+weatherImages.push(showersNightImage)
+import sleet from "../assets/WeatherIcons-main/SVG/3rd Set - Color/sleet.svg";
+const sleetImage = document.createElement('img')
+sleetImage.src = sleet
+sleetImage.setAttribute("id", "sleetImage")
+weatherImages.push(sleetImage)
+import snowShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-day.svg";
+const snowShowersDayImage = document.createElement('img')
+snowShowersDayImage.src = snowShowersDay
+snowShowersDayImage.setAttribute("id", "snowShowersDayImage")
+weatherImages.push(snowShowersDayImage)
+import snowShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-night.svg";
+const snowShowersNightImage = document.createElement('img')
+snowShowersNightImage.src = snowShowersNight
+snowShowersNightImage.setAttribute("id", "snowShowersNightImage")
+weatherImages.push(snowShowersNightImage)
+import snow from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow.svg";
+const snowImage = document.createElement('img')
+snowImage.src = snow
+snowImage.setAttribute("id", "snowImage")
+weatherImages.push(snowImage)
+import thunderRain from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-rain.svg";
+const thunderRainImage = document.createElement('img')
+thunderRainImage.src = thunderRain
+thunderRainImage.setAttribute("id", "thunderRainImage")
+weatherImages.push(thunderRainImage)
+import thunderShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-day.svg";
+const thunderShowersDayImage = document.createElement('img')
+thunderShowersDayImage.src = thunderShowersDay
+thunderShowersDayImage.setAttribute("id", "thunderShowersDayImage")
+weatherImages.push(thunderShowersDayImage)
+import thunderShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-night.svg";
+const thunderShowersNightImage = document.createElement('img')
+thunderShowersNightImage.src = thunderShowersNight
+thunderShowersNightImage.setAttribute("id", "thunderShowersNightImage")
+weatherImages.push(thunderShowersNightImage)
+import thunder from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder.svg";
+const thunderImage = document.createElement('img')
+thunderImage.src = thunder
+thunderImage.setAttribute("id", "thunderImage")
+weatherImages.push(thunderImage)
+import wind from "../assets/WeatherIcons-main/SVG/3rd Set - Color/wind.svg";
+const windImage = document.createElement('img')
+windImage.src = wind
+windImage.setAttribute("id", "windImage")
+weatherImages.push(windImage)
+
+
+const weatherIcons = {
+    clearDayImage: "clear-day",
+    clearNightImage: "clear-night",
+    cloudyImage: "cloudy",
+    fogImage: "fog",
+    hailImage: "hail",
+    partlyCloudyDayImage: "partly-cloudy-day",
+    partlyCloudyNightImage: "partly-cloudy-night",
+    rainSnowShowersDay: "rain-snow-showers-day",
+    rainSnowShowersNightImage: "rain-snow-showers-night",
+    rainSnowImage: "rain-snow",
+    rainImage: "rain",
+    showersDayImage: "showers-day",
+    showersNightImage: "showers-night",
+    sleetImage: "sleet",
+    snowShowerDayImage: "snow-showers-day",
+    snowShowerNightImage: "snow-showers-night",
+    snowImage: "snow",
+    thunderRainImage: "thunder-rain",
+    thunderShowersDay: "thunder-showers-day",
+    thunderShowersNightImage: "thunder-showers-night",
+    thunderImage: "thunder",
+    windImage: "wind",
+}
+
+function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+}
+console.log(typeof(getKeyByValue(weatherIcons, "clear-day")))
 
 const weatherForm = document.querySelector('.weatherForm')
 const cityInput = document.querySelector('.cityInput');
@@ -62,7 +196,7 @@ function displayWeatherInfo(data){
     console.log(data)
 
     const {resolvedAddress: city,
-           days: [{datetime, conditions, temp, tempmax, tempmin, uvindex, windspeed, feelslike, pressure, humidity, sunrise, sunset}, secondDay, thirdDay, forthDay, fifthDay, sixthDay, seventhDay, eigthDay]} = data;
+           days: [{datetime, conditions, temp, tempmax, tempmin, uvindex, windspeed, feelslike, pressure, humidity, sunrise, sunset, icon}, secondDay, thirdDay, forthDay, fifthDay, sixthDay, seventhDay, eigthDay]} = data;
     card.textContent = "";
     card.style.display = "flex";
     
@@ -173,6 +307,14 @@ function displayWeatherInfo(data){
     tempsBlock.appendChild(highLowRow)
     highLowRow.appendChild(tempminDisplay)
     highLowRow.appendChild(tempmaxDisplay)
+    mainConditionsRow.appendChild(iconPng)
+    console.log(`Icon is: ${icon}`)
+    
+    const iconString = icon
+    const theKey = getKeyByValue(weatherIcons, icon)
+    const currentDaySVG = getWeatherImage(theKey)
+    currentDaySVG.style.height = "120px"
+    iconPng.appendChild(currentDaySVG)
     // Appending minorConditionsRow
     minorConditionsRow.appendChild(minorBoxWind)
     minorConditionsRow.appendChild(minorBoxHumidity)
@@ -196,11 +338,20 @@ function displayWeatherInfo(data){
     const firstDayBoxWeekday = document.createElement('p')
     weekForecastRow.appendChild(firstDayBox)
     firstDayBoxWeekday.textContent = "Today";
+    const firstDayIcon = document.createElement('p')
+
     const firstDayHigh = document.createElement('p')
     firstDayHigh.textContent = tempmax
     const firstDayLow = document.createElement('p')
     firstDayLow.textContent = tempmin
-    firstDayBox.append(firstDayBoxWeekday, firstDayHigh, firstDayLow)
+    //1st day icon
+    const firstDayIconContainer = document.createElement("div")
+    const firstDayIconString = icon
+    const firstDaySVG = getWeatherImage(theKey)
+    firstDaySVG.style.height = "10px"
+    firstDayIconContainer.appendChild(firstDaySVG)
+
+    firstDayBox.append(firstDayBoxWeekday, firstDayIconContainer, firstDayHigh, firstDayLow)
 
     const secondDayBox = document.createElement('div')
     secondDayBox.classList.add('dayBox')
@@ -212,6 +363,13 @@ function displayWeatherInfo(data){
     secondDayHigh.textContent = secondDay.tempmax
     const secondDayLow = document.createElement('p')
     secondDayLow.textContent = secondDay.tempmin
+    //2nd day icon
+    // const secondDayIconContainer = document.createElement("div")
+    // const secondDayIconString = secondDay.icon
+    // const secondKey = getKeyByValue(weatherIcons, secondDay.icon)
+    // const secondDaySVG = getWeatherImage(secondKey)
+    // secondDaySVG.style.height = "10px"
+    // secondDayIconContainer.appendChild(secondDaySVG)
     secondDayBox.append(secondDayBoxWeekday, secondDayHigh, secondDayLow)
 
     const thirdDayBox = document.createElement('div')
@@ -291,8 +449,13 @@ function displayWeatherInfo(data){
 
 }
 
-function getWeatherEmoji(weatherId){
-
+function getWeatherImage(key){
+    for (const image of weatherImages){
+        if (key == image.id){
+            console.log(image)
+            return image
+        }
+    }
 }
 
 function displayError(message){
@@ -315,26 +478,3 @@ function casing(cityName) {
     }
     return upperCaseCityName;
 }
-// async function fetchData(){
-
-//     try {
-//         const response = await fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/new%20york?unitGroup=us&key=L7L27578GUK7YMFD4SANGWWQ9&contentType=json")
-
-//         if(!response.ok){
-//             throw new Error("Could not fetch resourse");
-//         }
-//         const data = await response.json();
-//             console.log(data)
-
-//         const address = data.address
-//         console.log(address)
-        
-//         const conditions = data.currentConditions.conditions
-//         console.log(conditions)
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
-// }
-
-// fetchData()

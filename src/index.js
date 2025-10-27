@@ -1,6 +1,4 @@
 import "./styles.css";
-import { add } from './math.js';
-console.log('Result:', add(5, 6));
 
 const weatherImages = []
 import clearDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg";
@@ -347,6 +345,7 @@ function displayWeatherInfo(data){
     //1st day icon
     const firstDayIconContainer = document.createElement("div")
     const firstDayIconString = icon
+    console.log(`firstDayIconString ${firstDayIconString}`)
     const firstDaySVG = getWeatherImage(theKey)
     firstDaySVG.style.height = "10px"
     firstDayIconContainer.appendChild(firstDaySVG)
@@ -364,13 +363,14 @@ function displayWeatherInfo(data){
     const secondDayLow = document.createElement('p')
     secondDayLow.textContent = secondDay.tempmin
     //2nd day icon
-    // const secondDayIconContainer = document.createElement("div")
-    // const secondDayIconString = secondDay.icon
-    // const secondKey = getKeyByValue(weatherIcons, secondDay.icon)
-    // const secondDaySVG = getWeatherImage(secondKey)
-    // secondDaySVG.style.height = "10px"
-    // secondDayIconContainer.appendChild(secondDaySVG)
-    secondDayBox.append(secondDayBoxWeekday, secondDayHigh, secondDayLow)
+    const secondDayIconContainer = document.createElement("div")
+    const secondDayIconString = secondDay.icon
+    console.log(`secondDayIconString ${secondDayIconString}`)
+    const secondKey = getKeyByValue(weatherIcons, secondDay.icon)
+    const secondDaySVG = getWeatherImage(secondKey)
+    secondDaySVG.style.height = "10px"
+    secondDayIconContainer.appendChild(secondDaySVG)
+    secondDayBox.append(secondDayBoxWeekday, secondDayIconContainer, secondDayHigh, secondDayLow)
 
     const thirdDayBox = document.createElement('div')
     thirdDayBox.classList.add('dayBox')
@@ -382,7 +382,13 @@ function displayWeatherInfo(data){
     thirdDayHigh.textContent = thirdDay.tempmax
     const thirdDayLow = document.createElement('p')
     thirdDayLow.textContent = thirdDay.tempmin
-    thirdDayBox.append(thirdDayBoxWeekday, thirdDayHigh, thirdDayLow)
+    const thirdDayIconContainer = document.createElement("div")
+    const thirdDayIconString = thirdDay.icon
+    const thirdKey = getKeyByValue(weatherIcons, thirdDay.icon)
+    const thirdDaySVG = getWeatherImage(thirdKey)
+    thirdDaySVG.style.height = "10px"
+    thirdDayIconContainer.appendChild(thirdDaySVG)
+    thirdDayBox.append(thirdDayBoxWeekday, thirdDayIconContainer, thirdDayHigh, thirdDayLow)
 
     const forthDayBox = document.createElement('div')
     forthDayBox.classList.add('dayBox')
@@ -394,7 +400,14 @@ function displayWeatherInfo(data){
     forthDayHigh.textContent = forthDay.tempmax
     const forthDayLow = document.createElement('p')
     forthDayLow.textContent = forthDay.tempmin
-    forthDayBox.append(forthDayBoxWeekday, forthDayHigh, forthDayLow)
+    const forthDayIconContainer = document.createElement("div")
+    const forthDayIconString = forthDay.icon
+    console.log(`forthDayIconString ${forthDayIconString}`)
+    const forthKey = getKeyByValue(weatherIcons, forthDay.icon)
+    const forthDaySVG = getWeatherImage(forthKey)
+    forthDaySVG.style.height = "10px"
+    forthDayIconContainer.appendChild(forthDaySVG)
+    forthDayBox.append(forthDayBoxWeekday, forthDayIconContainer, forthDayHigh, forthDayLow)
 
     const fifthDayBox = document.createElement('div')
     fifthDayBox.classList.add('dayBox')
@@ -406,7 +419,14 @@ function displayWeatherInfo(data){
     fifthDayHigh.textContent = fifthDay.tempmax
     const fifthDayLow = document.createElement('p')
     fifthDayLow.textContent = fifthDay.tempmin
-    fifthDayBox.append(fifthDayBoxWeekday, fifthDayHigh, fifthDayLow)
+    const fifthDayIconContainer = document.createElement("div")
+    const fifthDayIconString = fifthDay.icon
+    console.log(`fifthDayIconString ${fifthDayIconString}`)
+    const fifthKey = getKeyByValue(weatherIcons, fifthDay.icon)
+    const fifthDaySVG = getWeatherImage(fifthKey)
+    fifthDaySVG.style.height = "10px"
+    fifthDayIconContainer.appendChild(fifthDaySVG)
+    fifthDayBox.append(fifthDayBoxWeekday, fifthDayIconContainer, fifthDayHigh, fifthDayLow)
 
     const sixthDayBox = document.createElement('div')
     sixthDayBox.classList.add('dayBox')
@@ -418,7 +438,14 @@ function displayWeatherInfo(data){
     sixthDayHigh.textContent = sixthDay.tempmax
     const sixthDayLow = document.createElement('p')
     sixthDayLow.textContent = sixthDay.tempmin
-    sixthDayBox.append(sixthDayBoxWeekday, sixthDayHigh, sixthDayLow)
+    const sixthDayIconContainer = document.createElement("div")
+    const sixthDayIconString = sixthDay.icon
+    console.log(`sixthDayIconString ${sixthDayIconString}`)
+    const sixthKey = getKeyByValue(weatherIcons, sixthDay.icon)
+    const sixthDaySVG = getWeatherImage(sixthKey)
+    sixthDaySVG.style.height = "10px"
+    sixthDayIconContainer.appendChild(sixthDaySVG)
+    sixthDayBox.append(sixthDayBoxWeekday, sixthDayIconContainer, sixthDayHigh, sixthDayLow)
 
     const seventhDayBox = document.createElement('div')
     seventhDayBox.classList.add('dayBox')
@@ -430,7 +457,14 @@ function displayWeatherInfo(data){
     seventhDayHigh.textContent = seventhDay.tempmax
     const seventhDayLow = document.createElement('p')
     seventhDayLow.textContent = seventhDay.tempmin
-    seventhDayBox.append(seventhDayBoxWeekday, seventhDayHigh, seventhDayLow)
+    const seventhDayIconContainer = document.createElement("div")
+    const seventhDayIconString = seventhDay.icon
+    console.log(`seventhDayIconString ${seventhDayIconString}`)
+    const seventhKey = getKeyByValue(weatherIcons, seventhDay.icon)
+    const seventhDaySVG = getWeatherImage(seventhKey)
+    seventhDaySVG.style.height = "10px"
+    seventhDayIconContainer.appendChild(seventhDaySVG)
+    seventhDayBox.append(seventhDayBoxWeekday, seventhDayIconContainer, seventhDayHigh, seventhDayLow)
 
     const eigthDayBox = document.createElement('div')
     eigthDayBox.classList.add('dayBox')
@@ -442,10 +476,14 @@ function displayWeatherInfo(data){
     eigthDayHigh.textContent = eigthDay.tempmax
     const eigthDayLow = document.createElement('p')
     eigthDayLow.textContent = eigthDay.tempmin
-    eigthDayBox.append(eigthDayBoxWeekday, eigthDayHigh, eigthDayLow)
-    // card.appendChild(feelsLikeDisplay)
-    // card.appendChild(sunriseDisplay)
-    // card.appendChild(sunsetDisplay)
+    const eigthDayIconContainer = document.createElement("div")
+    const eigthDayIconString = eigthDay.icon
+    console.log(`eigthDayIconString ${eigthDayIconString}`)
+    const eigthKey = getKeyByValue(weatherIcons, eigthDay.icon)
+    const eigthDaySVG = getWeatherImage(eigthKey)
+    eigthDaySVG.style.height = "10px"
+    eigthDayIconContainer.appendChild(eigthDaySVG)
+    eigthDayBox.append(eigthDayBoxWeekday, eigthDayIconContainer, eigthDayHigh, eigthDayLow)
 
 }
 

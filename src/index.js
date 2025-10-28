@@ -1,118 +1,139 @@
 import "./styles.css";
 
-const weatherImages = []
 import clearDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg";
 const clearDayImage = document.createElement('img')
 clearDayImage.src = clearDay
-clearDayImage.setAttribute("id", "clearDayImage")
-weatherImages.push(clearDayImage)
+clearDayImage.setAttribute("class", "clearDayImage")
+
 import clearNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-night.svg";
 const clearNightImage = document.createElement('img')
 clearNightImage.src = clearNight
-clearNightImage.setAttribute("id", "clearNightImage")
-weatherImages.push(clearNightImage)
+clearNightImage.setAttribute("class", "clearNightImage")
+
 import cloudy from "../assets/WeatherIcons-main/SVG/3rd Set - Color/cloudy.svg";
 const cloudyImage = document.createElement('img')
 cloudyImage.src = cloudy
-cloudyImage.setAttribute("id", "cloudyImage")
-weatherImages.push(cloudyImage)
+cloudyImage.setAttribute("class", "cloudyImage")
+
 import fog from "../assets/WeatherIcons-main/SVG/3rd Set - Color/fog.svg";
 const fogImage = document.createElement('img')
 fogImage.src = fog
-fogImage.setAttribute("id", "fogImage")
-weatherImages.push(fogImage)
+fogImage.setAttribute("class", "fogImage")
+
 import hail from "../assets/WeatherIcons-main/SVG/3rd Set - Color/hail.svg";
 const hailImage = document.createElement('img')
 hailImage.src = hail
-hailImage.setAttribute("id", "hailImage")
-weatherImages.push(hailImage)
+hailImage.setAttribute("class", "hailImage")
+
 import partlyCloudyDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-day.svg";
 const partlyCloudyDayImage = document.createElement('img')
 partlyCloudyDayImage.src = partlyCloudyDay
-partlyCloudyDayImage.setAttribute("id", "partlyCloudyDayImage")
-weatherImages.push(partlyCloudyDayImage)
+partlyCloudyDayImage.setAttribute("class", "partlyCloudyDayImage")
+
 import partlyCloudyNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-night.svg";
 const partlyCloudyNightImage = document.createElement('img')
 partlyCloudyNightImage.src = partlyCloudyNight
-partlyCloudyNightImage.setAttribute("id", "partlyCloudyNightImage")
-weatherImages.push(partlyCloudyNightImage)
+partlyCloudyNightImage.setAttribute("class", "partlyCloudyNightImage")
+
 import rainSnowShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-day.svg";
 const rainSnowShowersDayImage = document.createElement('img')
 rainSnowShowersDayImage.src = rainSnowShowersDay
-rainSnowShowersDayImage.setAttribute("id", "rainSnowShowersDayImage")
-weatherImages.push(rainSnowShowersDayImage)
+rainSnowShowersDayImage.setAttribute("class", "rainSnowShowersDayImage")
+
 import rainSnowShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-night.svg";
 const rainSnowShowersNightImage = document.createElement('img')
 rainSnowShowersNightImage.src = rainSnowShowersNight
-rainSnowShowersNightImage.setAttribute("id", "rainSnowShowersNightImage")
-weatherImages.push(rainSnowShowersNightImage)
+rainSnowShowersNightImage.setAttribute("class", "rainSnowShowersNightImage")
+
 import rainSnow from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow.svg";
 const rainSnowImage = document.createElement('img')
 rainSnowImage.src = rainSnow
-rainSnowImage.setAttribute("id", "rainSnowImage")
-weatherImages.push(rainSnowImage)
+rainSnowImage.setAttribute("class", "rainSnowImage")
+
 import rain from "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain.svg";
 const rainImage = document.createElement('img')
 rainImage.src = rain
-rainImage.setAttribute("id", "rainImage")
-weatherImages.push(rainImage)
+rainImage.setAttribute("class", "rainImage")
+
 import showersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-day.svg";
 const showersDayImage = document.createElement('img')
 showersDayImage.src = showersDay
-showersDayImage.setAttribute("id", "showersDayImage")
-weatherImages.push(showersDayImage)
+showersDayImage.setAttribute("class", "showersDayImage")
+
 import showersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-night.svg";
 const showersNightImage = document.createElement('img')
 showersNightImage.src = showersNight
-showersNightImage.setAttribute("id", "showersNightImage")
-weatherImages.push(showersNightImage)
+showersNightImage.setAttribute("class", "showersNightImage")
+
 import sleet from "../assets/WeatherIcons-main/SVG/3rd Set - Color/sleet.svg";
 const sleetImage = document.createElement('img')
 sleetImage.src = sleet
-sleetImage.setAttribute("id", "sleetImage")
-weatherImages.push(sleetImage)
+sleetImage.setAttribute("class", "sleetImage")
+
 import snowShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-day.svg";
 const snowShowersDayImage = document.createElement('img')
 snowShowersDayImage.src = snowShowersDay
-snowShowersDayImage.setAttribute("id", "snowShowersDayImage")
-weatherImages.push(snowShowersDayImage)
+snowShowersDayImage.setAttribute("class", "snowShowersDayImage")
+
 import snowShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-night.svg";
 const snowShowersNightImage = document.createElement('img')
 snowShowersNightImage.src = snowShowersNight
-snowShowersNightImage.setAttribute("id", "snowShowersNightImage")
-weatherImages.push(snowShowersNightImage)
+snowShowersNightImage.setAttribute("class", "snowShowersNightImage")
+
 import snow from "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow.svg";
 const snowImage = document.createElement('img')
 snowImage.src = snow
-snowImage.setAttribute("id", "snowImage")
-weatherImages.push(snowImage)
+snowImage.setAttribute("class", "snowImage")
+
 import thunderRain from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-rain.svg";
 const thunderRainImage = document.createElement('img')
 thunderRainImage.src = thunderRain
-thunderRainImage.setAttribute("id", "thunderRainImage")
-weatherImages.push(thunderRainImage)
+thunderRainImage.setAttribute("class", "thunderRainImage")
+
 import thunderShowersDay from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-day.svg";
 const thunderShowersDayImage = document.createElement('img')
 thunderShowersDayImage.src = thunderShowersDay
-thunderShowersDayImage.setAttribute("id", "thunderShowersDayImage")
-weatherImages.push(thunderShowersDayImage)
+thunderShowersDayImage.setAttribute("class", "thunderShowersDayImage")
+
 import thunderShowersNight from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-night.svg";
 const thunderShowersNightImage = document.createElement('img')
 thunderShowersNightImage.src = thunderShowersNight
-thunderShowersNightImage.setAttribute("id", "thunderShowersNightImage")
-weatherImages.push(thunderShowersNightImage)
+thunderShowersNightImage.setAttribute("class", "thunderShowersNightImage")
+
 import thunder from "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder.svg";
 const thunderImage = document.createElement('img')
 thunderImage.src = thunder
-thunderImage.setAttribute("id", "thunderImage")
-weatherImages.push(thunderImage)
+thunderImage.setAttribute("class", "thunderImage")
+
 import wind from "../assets/WeatherIcons-main/SVG/3rd Set - Color/wind.svg";
 const windImage = document.createElement('img')
 windImage.src = wind
-windImage.setAttribute("id", "windImage")
-weatherImages.push(windImage)
+windImage.setAttribute("class", "windImage")
 
 
+const weatherImages = {
+    clearDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg",
+    clearNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-night.svg",
+    cloudyImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/cloudy.svg",
+    fogImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/fog.svg",
+    hailImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/hail.svg",
+    partlyCloudyDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-day.svg",
+    partlyCloudyNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-night.svg",
+    rainSnowShowersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-day.svg",
+    rainSnowShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-night.svg",
+    rainSnowImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow.svg",
+    rainImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain.svg",
+    showersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-day.svg",
+    showersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-night.svg",
+    sleetImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/sleet.svg",
+    snowShowersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-day.svg",
+    snowShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-night.svg",
+    snowImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow.svg",
+    thunderRainImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-rain.svg",
+    thunderShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-night.svg",
+    thunderImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder.svg",
+    windImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/wind.svg",
+}
 const weatherIcons = {
     clearDayImage: "clear-day",
     clearNightImage: "clear-night",
@@ -306,11 +327,13 @@ function displayWeatherInfo(data){
     highLowRow.appendChild(tempminDisplay)
     highLowRow.appendChild(tempmaxDisplay)
     mainConditionsRow.appendChild(iconPng)
-    console.log(`Icon is: ${icon}`)
+    // console.log(`Icon is: ${icon}`)
     
     const iconString = icon
     const theKey = getKeyByValue(weatherIcons, icon)
-    const currentDaySVG = getWeatherImage(theKey)
+    console.log(`The key is: ${theKey}`)
+    const currentDaySVG = document.createElement('img')
+    currentDaySVG.src = assignImageSrc(theKey)
     currentDaySVG.style.height = "120px"
     iconPng.appendChild(currentDaySVG)
     // Appending minorConditionsRow
@@ -336,7 +359,6 @@ function displayWeatherInfo(data){
     const firstDayBoxWeekday = document.createElement('p')
     weekForecastRow.appendChild(firstDayBox)
     firstDayBoxWeekday.textContent = "Today";
-    const firstDayIcon = document.createElement('p')
 
     const firstDayHigh = document.createElement('p')
     firstDayHigh.textContent = tempmax
@@ -344,10 +366,9 @@ function displayWeatherInfo(data){
     firstDayLow.textContent = tempmin
     //1st day icon
     const firstDayIconContainer = document.createElement("div")
-    const firstDayIconString = icon
-    console.log(`firstDayIconString ${firstDayIconString}`)
-    const firstDaySVG = getWeatherImage(theKey)
-    firstDaySVG.style.height = "10px"
+    const firstDaySVG = document.createElement('img')
+    firstDaySVG.src = assignImageSrc(theKey)
+    firstDaySVG.style.height = "20px"
     firstDayIconContainer.appendChild(firstDaySVG)
 
     firstDayBox.append(firstDayBoxWeekday, firstDayIconContainer, firstDayHigh, firstDayLow)
@@ -364,11 +385,10 @@ function displayWeatherInfo(data){
     secondDayLow.textContent = secondDay.tempmin
     //2nd day icon
     const secondDayIconContainer = document.createElement("div")
-    const secondDayIconString = secondDay.icon
-    console.log(`secondDayIconString ${secondDayIconString}`)
     const secondKey = getKeyByValue(weatherIcons, secondDay.icon)
-    const secondDaySVG = getWeatherImage(secondKey)
-    secondDaySVG.style.height = "10px"
+    const secondDaySVG = document.createElement('img')
+    secondDaySVG.src = assignImageSrc(secondKey)
+    secondDaySVG.style.height = "20px"
     secondDayIconContainer.appendChild(secondDaySVG)
     secondDayBox.append(secondDayBoxWeekday, secondDayIconContainer, secondDayHigh, secondDayLow)
 
@@ -382,11 +402,12 @@ function displayWeatherInfo(data){
     thirdDayHigh.textContent = thirdDay.tempmax
     const thirdDayLow = document.createElement('p')
     thirdDayLow.textContent = thirdDay.tempmin
+    //3rd day icon
     const thirdDayIconContainer = document.createElement("div")
-    const thirdDayIconString = thirdDay.icon
     const thirdKey = getKeyByValue(weatherIcons, thirdDay.icon)
-    const thirdDaySVG = getWeatherImage(thirdKey)
-    thirdDaySVG.style.height = "10px"
+    const thirdDaySVG = document.createElement('img')
+    thirdDaySVG.src = assignImageSrc(thirdKey)
+    thirdDaySVG.style.height = "20px"
     thirdDayIconContainer.appendChild(thirdDaySVG)
     thirdDayBox.append(thirdDayBoxWeekday, thirdDayIconContainer, thirdDayHigh, thirdDayLow)
 
@@ -401,11 +422,10 @@ function displayWeatherInfo(data){
     const forthDayLow = document.createElement('p')
     forthDayLow.textContent = forthDay.tempmin
     const forthDayIconContainer = document.createElement("div")
-    const forthDayIconString = forthDay.icon
-    console.log(`forthDayIconString ${forthDayIconString}`)
     const forthKey = getKeyByValue(weatherIcons, forthDay.icon)
-    const forthDaySVG = getWeatherImage(forthKey)
-    forthDaySVG.style.height = "10px"
+    const forthDaySVG = document.createElement('img')
+    forthDaySVG.src = assignImageSrc(forthKey)
+    forthDaySVG.style.height = "20px"
     forthDayIconContainer.appendChild(forthDaySVG)
     forthDayBox.append(forthDayBoxWeekday, forthDayIconContainer, forthDayHigh, forthDayLow)
 
@@ -420,11 +440,10 @@ function displayWeatherInfo(data){
     const fifthDayLow = document.createElement('p')
     fifthDayLow.textContent = fifthDay.tempmin
     const fifthDayIconContainer = document.createElement("div")
-    const fifthDayIconString = fifthDay.icon
-    console.log(`fifthDayIconString ${fifthDayIconString}`)
     const fifthKey = getKeyByValue(weatherIcons, fifthDay.icon)
-    const fifthDaySVG = getWeatherImage(fifthKey)
-    fifthDaySVG.style.height = "10px"
+    const fifthDaySVG = document.createElement('img')
+    fifthDaySVG.src = assignImageSrc(fifthKey)
+    fifthDaySVG.style.height = "20px"
     fifthDayIconContainer.appendChild(fifthDaySVG)
     fifthDayBox.append(fifthDayBoxWeekday, fifthDayIconContainer, fifthDayHigh, fifthDayLow)
 
@@ -439,11 +458,10 @@ function displayWeatherInfo(data){
     const sixthDayLow = document.createElement('p')
     sixthDayLow.textContent = sixthDay.tempmin
     const sixthDayIconContainer = document.createElement("div")
-    const sixthDayIconString = sixthDay.icon
-    console.log(`sixthDayIconString ${sixthDayIconString}`)
     const sixthKey = getKeyByValue(weatherIcons, sixthDay.icon)
-    const sixthDaySVG = getWeatherImage(sixthKey)
-    sixthDaySVG.style.height = "10px"
+    const sixthDaySVG = document.createElement('img')
+    sixthDaySVG.src = assignImageSrc(sixthKey)
+    sixthDaySVG.style.height = "20px"
     sixthDayIconContainer.appendChild(sixthDaySVG)
     sixthDayBox.append(sixthDayBoxWeekday, sixthDayIconContainer, sixthDayHigh, sixthDayLow)
 
@@ -458,11 +476,10 @@ function displayWeatherInfo(data){
     const seventhDayLow = document.createElement('p')
     seventhDayLow.textContent = seventhDay.tempmin
     const seventhDayIconContainer = document.createElement("div")
-    const seventhDayIconString = seventhDay.icon
-    console.log(`seventhDayIconString ${seventhDayIconString}`)
     const seventhKey = getKeyByValue(weatherIcons, seventhDay.icon)
-    const seventhDaySVG = getWeatherImage(seventhKey)
-    seventhDaySVG.style.height = "10px"
+    const seventhDaySVG = document.createElement('img')
+    seventhDaySVG.src = assignImageSrc(seventhKey)
+    seventhDaySVG.style.height = "20px"
     seventhDayIconContainer.appendChild(seventhDaySVG)
     seventhDayBox.append(seventhDayBoxWeekday, seventhDayIconContainer, seventhDayHigh, seventhDayLow)
 
@@ -477,22 +494,21 @@ function displayWeatherInfo(data){
     const eigthDayLow = document.createElement('p')
     eigthDayLow.textContent = eigthDay.tempmin
     const eigthDayIconContainer = document.createElement("div")
-    const eigthDayIconString = eigthDay.icon
-    console.log(`eigthDayIconString ${eigthDayIconString}`)
     const eigthKey = getKeyByValue(weatherIcons, eigthDay.icon)
-    const eigthDaySVG = getWeatherImage(eigthKey)
-    eigthDaySVG.style.height = "10px"
+    const eigthDaySVG = document.createElement('img')
+    eigthDaySVG.src = assignImageSrc(eigthKey)
+    eigthDaySVG.style.height = "20px"
     eigthDayIconContainer.appendChild(eigthDaySVG)
     eigthDayBox.append(eigthDayBoxWeekday, eigthDayIconContainer, eigthDayHigh, eigthDayLow)
 
 }
 
-function getWeatherImage(key){
-    for (const image of weatherImages){
-        if (key == image.id){
-            console.log(image)
-            return image
-        }
+function assignImageSrc(theKey){
+    for (const image in weatherImages) {
+        if (theKey == image){
+            console.log(weatherImages[image])
+            return weatherImages[image]
+        } 
     }
 }
 

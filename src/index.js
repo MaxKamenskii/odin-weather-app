@@ -31,109 +31,24 @@ partlyCloudyDayImage.src = partlyCloudyDay
 partlyCloudyDayImage.setAttribute("class", "partlyCloudyDayImage")
 
 import partlyCloudyNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/partly-cloudy-night.svg";
-const partlyCloudyNightImage = document.createElement('img')
-partlyCloudyNightImage.src = partlyCloudyNight
-partlyCloudyNightImage.setAttribute("class", "partlyCloudyNightImage")
-
 import rainSnowShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow-showers-day.svg";
-const rainSnowShowersDayImage = document.createElement('img')
-rainSnowShowersDayImage.src = rainSnowShowersDay
-rainSnowShowersDayImage.setAttribute("class", "rainSnowShowersDayImage")
-
 import rainSnowShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow-showers-night.svg";
-const rainSnowShowersNightImage = document.createElement('img')
-rainSnowShowersNightImage.src = rainSnowShowersNight
-rainSnowShowersNightImage.setAttribute("class", "rainSnowShowersNightImage")
-
 import rainSnow from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow.svg";
-const rainSnowImage = document.createElement('img')
-rainSnowImage.src = rainSnow
-rainSnowImage.setAttribute("class", "rainSnowImage")
-
 import rain from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain.svg";
-const rainImage = document.createElement('img')
-rainImage.src = rain
-rainImage.setAttribute("class", "rainImage")
-
 import showersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/showers-day.svg";
-const showersDayImage = document.createElement('img')
-showersDayImage.src = showersDay
-showersDayImage.setAttribute("class", "showersDayImage")
-
 import showersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/showers-night.svg";
-const showersNightImage = document.createElement('img')
-showersNightImage.src = showersNight
-showersNightImage.setAttribute("class", "showersNightImage")
-
 import sleet from "../assets/WeatherIcons-main/SVG/1st Set - Color/sleet.svg";
-const sleetImage = document.createElement('img')
-sleetImage.src = sleet
-sleetImage.setAttribute("class", "sleetImage")
-
 import snowShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow-showers-day.svg";
-const snowShowersDayImage = document.createElement('img')
-snowShowersDayImage.src = snowShowersDay
-snowShowersDayImage.setAttribute("class", "snowShowersDayImage")
-
 import snowShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow-showers-night.svg";
-const snowShowersNightImage = document.createElement('img')
-snowShowersNightImage.src = snowShowersNight
-snowShowersNightImage.setAttribute("class", "snowShowersNightImage")
-
 import snow from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow.svg";
-const snowImage = document.createElement('img')
-snowImage.src = snow
-snowImage.setAttribute("class", "snowImage")
-
 import thunderRain from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-rain.svg";
-const thunderRainImage = document.createElement('img')
-thunderRainImage.src = thunderRain
-thunderRainImage.setAttribute("class", "thunderRainImage")
-
 import thunderShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-showers-day.svg";
-const thunderShowersDayImage = document.createElement('img')
-thunderShowersDayImage.src = thunderShowersDay
-thunderShowersDayImage.setAttribute("class", "thunderShowersDayImage")
-
 import thunderShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-showers-night.svg";
-const thunderShowersNightImage = document.createElement('img')
-thunderShowersNightImage.src = thunderShowersNight
-thunderShowersNightImage.setAttribute("class", "thunderShowersNightImage")
-
 import thunder from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder.svg";
-const thunderImage = document.createElement('img')
-thunderImage.src = thunder
-thunderImage.setAttribute("class", "thunderImage")
-
 import wind from "../assets/WeatherIcons-main/SVG/1st Set - Color/wind.svg";
-const windImage = document.createElement('img')
-windImage.src = wind
-windImage.setAttribute("class", "windImage")
 
 
-const weatherImages = {
-    clearDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg",
-    clearNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-night.svg",
-    cloudyImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/cloudy.svg",
-    fogImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/fog.svg",
-    hailImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/hail.svg",
-    partlyCloudyDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-day.svg",
-    partlyCloudyNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/partly-cloudy-night.svg",
-    rainSnowShowersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-day.svg",
-    rainSnowShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow-showers-night.svg",
-    rainSnowImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain-snow.svg",
-    rainImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/rain.svg",
-    showersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-day.svg",
-    showersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/showers-night.svg",
-    sleetImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/sleet.svg",
-    snowShowersDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-day.svg",
-    snowShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow-showers-night.svg",
-    snowImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/snow.svg",
-    thunderRainImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-rain.svg",
-    thunderShowersNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder-showers-night.svg",
-    thunderImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/thunder.svg",
-    windImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/wind.svg",
-}
+
 const weatherIcons = {
     clearDayImage: "clear-day",
     clearNightImage: "clear-night",
@@ -533,9 +448,9 @@ function assignImageSrc(theKey){
   } else if (theKey === "sleetImage") {
     return sleet;
   } else if (theKey === "snowShowerDayImage") {
-    return snowShowerDay;
+    return snowShowersDay;
   } else if (theKey === "snowShowerNightImage") {
-    return snowShowerNight;
+    return snowShowersNight;
   } else if (theKey === "snowImage") {
     return snow;
   } else if (theKey === "thunderRainImage") {

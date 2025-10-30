@@ -1,5 +1,116 @@
 import "./styles.css";
 
+import clearDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/clear-day.svg";
+const clearDayImage = document.createElement('img')
+clearDayImage.src = clearDay
+clearDayImage.setAttribute("class", "clearDayImage")
+
+import clearNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/clear-night.svg";
+const clearNightImage = document.createElement('img')
+clearNightImage.src = clearNight
+clearNightImage.setAttribute("class", "clearNightImage")
+
+import cloudy from "../assets/WeatherIcons-main/SVG/1st Set - Color/cloudy.svg";
+const cloudyImage = document.createElement('img')
+cloudyImage.src = cloudy
+cloudyImage.setAttribute("class", "cloudyImage")
+
+import fog from "../assets/WeatherIcons-main/SVG/1st Set - Color/fog.svg";
+const fogImage = document.createElement('img')
+fogImage.src = fog
+fogImage.setAttribute("class", "fogImage")
+
+import hail from "../assets/WeatherIcons-main/SVG/1st Set - Color/hail.svg";
+const hailImage = document.createElement('img')
+hailImage.src = hail
+hailImage.setAttribute("class", "hailImage")
+
+import partlyCloudyDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/partly-cloudy-day.svg";
+const partlyCloudyDayImage = document.createElement('img')
+partlyCloudyDayImage.src = partlyCloudyDay
+partlyCloudyDayImage.setAttribute("class", "partlyCloudyDayImage")
+
+import partlyCloudyNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/partly-cloudy-night.svg";
+const partlyCloudyNightImage = document.createElement('img')
+partlyCloudyNightImage.src = partlyCloudyNight
+partlyCloudyNightImage.setAttribute("class", "partlyCloudyNightImage")
+
+import rainSnowShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow-showers-day.svg";
+const rainSnowShowersDayImage = document.createElement('img')
+rainSnowShowersDayImage.src = rainSnowShowersDay
+rainSnowShowersDayImage.setAttribute("class", "rainSnowShowersDayImage")
+
+import rainSnowShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow-showers-night.svg";
+const rainSnowShowersNightImage = document.createElement('img')
+rainSnowShowersNightImage.src = rainSnowShowersNight
+rainSnowShowersNightImage.setAttribute("class", "rainSnowShowersNightImage")
+
+import rainSnow from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain-snow.svg";
+const rainSnowImage = document.createElement('img')
+rainSnowImage.src = rainSnow
+rainSnowImage.setAttribute("class", "rainSnowImage")
+
+import rain from "../assets/WeatherIcons-main/SVG/1st Set - Color/rain.svg";
+const rainImage = document.createElement('img')
+rainImage.src = rain
+rainImage.setAttribute("class", "rainImage")
+
+import showersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/showers-day.svg";
+const showersDayImage = document.createElement('img')
+showersDayImage.src = showersDay
+showersDayImage.setAttribute("class", "showersDayImage")
+
+import showersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/showers-night.svg";
+const showersNightImage = document.createElement('img')
+showersNightImage.src = showersNight
+showersNightImage.setAttribute("class", "showersNightImage")
+
+import sleet from "../assets/WeatherIcons-main/SVG/1st Set - Color/sleet.svg";
+const sleetImage = document.createElement('img')
+sleetImage.src = sleet
+sleetImage.setAttribute("class", "sleetImage")
+
+import snowShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow-showers-day.svg";
+const snowShowersDayImage = document.createElement('img')
+snowShowersDayImage.src = snowShowersDay
+snowShowersDayImage.setAttribute("class", "snowShowersDayImage")
+
+import snowShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow-showers-night.svg";
+const snowShowersNightImage = document.createElement('img')
+snowShowersNightImage.src = snowShowersNight
+snowShowersNightImage.setAttribute("class", "snowShowersNightImage")
+
+import snow from "../assets/WeatherIcons-main/SVG/1st Set - Color/snow.svg";
+const snowImage = document.createElement('img')
+snowImage.src = snow
+snowImage.setAttribute("class", "snowImage")
+
+import thunderRain from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-rain.svg";
+const thunderRainImage = document.createElement('img')
+thunderRainImage.src = thunderRain
+thunderRainImage.setAttribute("class", "thunderRainImage")
+
+import thunderShowersDay from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-showers-day.svg";
+const thunderShowersDayImage = document.createElement('img')
+thunderShowersDayImage.src = thunderShowersDay
+thunderShowersDayImage.setAttribute("class", "thunderShowersDayImage")
+
+import thunderShowersNight from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder-showers-night.svg";
+const thunderShowersNightImage = document.createElement('img')
+thunderShowersNightImage.src = thunderShowersNight
+thunderShowersNightImage.setAttribute("class", "thunderShowersNightImage")
+
+import thunder from "../assets/WeatherIcons-main/SVG/1st Set - Color/thunder.svg";
+const thunderImage = document.createElement('img')
+thunderImage.src = thunder
+thunderImage.setAttribute("class", "thunderImage")
+
+import wind from "../assets/WeatherIcons-main/SVG/1st Set - Color/wind.svg";
+const windImage = document.createElement('img')
+windImage.src = wind
+windImage.setAttribute("class", "windImage")
+
+
 const weatherImages = {
     clearDayImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-day.svg",
     clearNightImage: "../assets/WeatherIcons-main/SVG/3rd Set - Color/clear-night.svg",
@@ -393,12 +504,51 @@ function displayWeatherInfo(data){
 }
 
 function assignImageSrc(theKey){
-    for (const image in weatherImages) {
-        if (theKey == image){
-            console.log(weatherImages[image])
-            return weatherImages[image]
-        } 
-    }
+    if (theKey === "clearDayImage") {
+    return clearDay;
+  } else if (theKey === "clearNightImage") {
+    return clearNight;
+  } else if (theKey === "cloudyImage") {
+    return cloudy;
+  } else if (theKey === "fogImage") {
+    return fog;
+  } else if (theKey === "hailImage") {
+    return hail;
+  } else if (theKey === "partlyCloudyDayImage") {
+    return partlyCloudyDay;
+  } else if (theKey === "partlyCloudyNightImage") {
+    return partlyCloudyNight;
+  } else if (theKey === "rainSnowShowersDay") {
+    return rainSnowShowersDay;
+  } else if (theKey === "rainSnowShowersNightImage") {
+    return rainSnowShowersNight;
+  } else if (theKey === "rainSnowImage") {
+    return rainSnow;
+  } else if (theKey === "rainImage") {
+    return rain;
+  } else if (theKey === "showersDayImage") {
+    return showersDay;
+  } else if (theKey === "showersNightImage") {
+    return showersNight;
+  } else if (theKey === "sleetImage") {
+    return sleet;
+  } else if (theKey === "snowShowerDayImage") {
+    return snowShowerDay;
+  } else if (theKey === "snowShowerNightImage") {
+    return snowShowerNight;
+  } else if (theKey === "snowImage") {
+    return snow;
+  } else if (theKey === "thunderRainImage") {
+    return thunderRain;
+  } else if (theKey === "thunderShowersDay") {
+    return thunderShowersDay;
+  } else if (theKey === "thunderShowersNightImage") {
+    return thunderShowersNight;
+  } else if (theKey === "thunderImage") {
+    return thunder;
+  } else if (theKey === "windImage") {
+    return wind;
+  }
 }
 
 function displayError(message){
